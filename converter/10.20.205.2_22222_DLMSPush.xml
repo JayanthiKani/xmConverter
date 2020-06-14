@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+<!--1: 7E A0 0A 00 02 04 01 41 53 2E 16 7E-->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Disconnect Request frame. -->
+<FrameType Value="53" />
+<DisconnectRequest>
+</DisconnectRequest>
+</HDLC>
+<!--2: 7E A0 0A 41 00 02 04 01 73 1F 13 7E -->
+<HDLC len="C" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- UA frame. -->
+<FrameType Value="73" />
+<Ua>
+</Ua>
+</HDLC>
+<!--3: 7E A0 21 00 02 04 01 41 93 23 C5 81 80 12 05 01 80 06 01 80 07 04 00 00 00 01 08 04 00 00 00 01 53 3B 7E-->
+<HDLC len="20" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!--  SNRM frame. --> 
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="128" />
+  <MaxInfoRX Value="128" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+</PDU>
+</HDLC>
+<!--4: 7E A0 23 41 00 02 04 01 73 A5 31 81 80 14 05 02 00 80 06 02 00 80 07 04 00 00 00 01 08 04 00 00 00 01 CE 6A 7E-->
+<HDLC len="22" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- UA frame. -->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="128" />
+  <MaxInfoRX Value="128" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+<!--5: 7E A0 47 00 02 04 01 41 10 F8 8F E6 E6 00 60 36 A1 09 06 07 60 85 74 05 08 01 01 8A 02 07 80 8B 07 60 85 74 05 08 02 01 AC 0A 80 08 31 41 32 42 33 43 34 44 BE 10 04 0E 01 00 00 00 06 5F 1F 04 00 00 18 1D FF FF 44 E6 7E-->
+<HDLC len="46" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- AARQ frame. -->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="Low" />
+  <CallingAuthentication Value="3141324233433444" />
+  <InitiateRequest>
+    <ProposedDlmsVersionNumber Value="06" />
+    <ProposedConformance>
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Action" />
+    </ProposedConformance>
+    <ProposedMaxPduSize Value="FFFF" />
+  </InitiateRequest>
+</AssociationRequest>
+</PDU>
+</HDLC>
+<!--6: 7E A0 3A 41 00 02 04 01 30 CA B5 E6 E7 00 61 29 A1 09 06 07 60 85 74 05 08 01 01 A2 03 02 01 00 A3 05 A1 03 02 01 00 BE 10 04 0E 08 00 06 5F 1F 04 00 00 10 14 02 00 00 07 BC 85 7E-->
+<HDLC len="39" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- AARE frame. -->
+<FrameType Value="30" />
+<PDU>
+<AssociationResponse>
+  <ApplicationContextName Value="LN" />
+  <AssociationResult Value="00" />
+  <ResultSourceDiagnostic>
+    <ACSEServiceUser Value="00" />
+  </ResultSourceDiagnostic>
+  <InitiateResponse>
+    <NegotiatedDlmsVersionNumber Value="06" />
+    <NegotiatedConformance>
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="SelectiveAccess" />
+    </NegotiatedConformance>
+    <NegotiatedMaxPduSize Value="0200" />
+    <VaaName Value="0007" />
+  </InitiateResponse>
+</AssociationResponse>
+</PDU>
+</HDLC>
+<!--7: 7E A0 1C 00 02 04 01 41 32 A5 89 E6 E6 00 C0 01 81 00 01 00 00 60 01 00 FF 02 00 8C 6D 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="32" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 0.0.96.1.0.255 -->
+      <InstanceId Value="0000600100FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--8: 7E A0 23 41 00 02 04 01 52 2E 01 E6 E7 00 C4 01 81 00 09 0E 20 20 20 20 20 20 20 35 30 39 37 39 39 36 A5 F0 7E-->
+<HDLC len="22" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="52" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <!--        5097996 -->
+        <OctetString Value="2020202020202035303937393936" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--9: 7E A0 1C 00 02 04 01 41 1E CB 62 E6 E6 00 C0 01 81 00 08 00 00 01 00 00 FF 02 00 65 D7 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 1E. Expected: 54 -->
+<FrameType Value="1E" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Clock -->
+      <ClassId Value="0008" />
+      <!-- 0.0.1.0.0.255 -->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--10: 7E A0 21 41 00 02 04 01 10 83 57 E6 E7 00 C4 01 81 00 09 0C 07 E4 05 0F 05 14 00 1F 00 01 4A 00 67 0F 7E-->
+<HDLC len="20" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 10. Expected: 54 -->
+<FrameType Value="10" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <!-- 5/16/2020 7:00:31 AM -->
+        <OctetString Value="07E4050F0514001F00014A00" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--11: 7E A0 1C 00 02 04 01 41 76 85 8D E6 E6 00 C0 01 81 00 01 00 00 2A 00 00 FF 02 00 17 4D 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 76. Expected: 54 -->
+<FrameType Value="76" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 0.0.42.0.0.255 -->
+      <InstanceId Value="00002A0000FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--12: 7E A0 20 41 00 02 04 01 96 68 29 E6 E7 00 C4 01 81 00 09 0B 47 4F 45 52 41 50 44 52 50 2D 43 67 B1 7E-->
+<HDLC len="1F" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 96. Expected: 54 -->
+<FrameType Value="96" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <!-- GOERAPDRP-C -->
+        <OctetString Value="474F455241504452502D43" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--13: 7E A0 1C 00 02 04 01 41 54 95 8F E6 E6 00 C0 01 81 00 01 01 00 00 04 02 FF 02 00 A0 74 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="54" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 1.0.0.4.2.255 -->
+      <InstanceId Value="0100000402FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--14: 7E A0 16 41 00 02 04 01 74 F3 63 E6 E7 00 C4 01 81 00 12 00 01 A8 61 7E-->
+<HDLC len="15" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="74" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt16 Value="0001" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--15: 7E A0 1C 00 02 04 01 41 76 85 8D E6 E6 00 C0 01 81 00 01 01 00 00 04 03 FF 02 00 1B 68 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="76" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 1.0.0.4.3.255 -->
+      <InstanceId Value="0100000403FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--16: 7E A0 16 41 00 02 04 01 96 EF A7 E6 E7 00 C4 01 81 00 12 00 01 A8 61 7E-->
+<HDLC len="15" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="96" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt16 Value="0001" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--17: 7E A0 1C 00 02 04 01 41 54 95 8F E6 E6 00 C0 01 81 00 01 01 00 00 02 00 FF 02 00 4E 76 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 54. Expected: 98 -->
+<FrameType Value="54" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 1.0.0.2.0.255 -->
+      <InstanceId Value="0100000200FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--18: 7E A0 20 41 00 02 04 01 74 74 ED E6 E7 00 C4 01 81 00 0A 0B 4C 43 30 30 33 2E 36 33 32 32 38 0C 57 7E-->
+<HDLC len="1F" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 74. Expected: 98 -->
+<FrameType Value="74" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <String Value="LC003.63228" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--19: 7E A0 1C 00 02 04 01 41 FA E1 C3 E6 E6 00 C0 01 81 00 01 01 00 00 08 00 FF 02 00 E6 3A 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: FA. Expected: 98 -->
+<FrameType Value="FA" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 1.0.0.8.0.255 -->
+      <InstanceId Value="0100000800FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--20: 7E A0 16 41 00 02 04 01 DE A3 69 E6 E7 00 C4 01 81 00 12 07 08 61 B1 7E-->
+<HDLC len="15" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: DE. Expected: 98 -->
+<FrameType Value="DE" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt16 Value="0708" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--21: 7E A0 1C 00 02 04 01 41 30 B7 AA E6 E6 00 C0 01 81 00 01 00 00 00 01 00 FF 02 00 3D EA 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 30. Expected: 98 -->
+<FrameType Value="30" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 0.0.0.1.0.255 -->
+      <InstanceId Value="0000000100FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--22: 7E A0 18 41 00 02 04 01 32 E0 C2 E6 E7 00 C4 01 81 00 06 00 00 00 05 D6 88 7E-->
+<HDLC len="17" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 32. Expected: 98 -->
+<FrameType Value="32" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt32 Value="00000005" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--23: 7E A0 1C 00 02 04 01 41 52 A3 EA E6 E6 00 C0 01 81 00 3F 00 00 60 0A 01 FF 02 00 A3 E5 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 52. Expected: 98 -->
+<FrameType Value="52" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- StatusMapping -->
+      <ClassId Value="003F" />
+      <!-- 0.0.96.10.1.255 -->
+      <InstanceId Value="0000600A01FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--24: 7E A0 23 41 00 02 04 01 54 18 64 E6 E7 00 C4 01 81 00 04 70 00 00 00 00 00 00 00 00 00 00 07 F4 00 00 CE 47 7E-->
+<HDLC len="22" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 54. Expected: 98 -->
+<FrameType Value="54" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <BitString Value="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111101000000000000000000" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--25: 7E A0 1C 00 02 04 01 41 74 97 AE E6 E6 00 C0 01 81 00 01 00 00 60 01 01 FF 02 00 37 71 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 74. Expected: 98 -->
+<FrameType Value="74" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 0.0.96.1.1.255 -->
+      <InstanceId Value="0000600101FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--26: 7E A0 34 41 00 02 04 01 76 D9 14 E6 E7 00 C4 01 81 00 09 1F 47 45 4E 55 53 20 50 4F 57 45 52 20 49 4E 46 52 41 53 54 52 55 43 54 55 52 45 53 20 4C 54 44 63 32 7E-->
+<HDLC len="33" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 76. Expected: 98 -->
+<FrameType Value="76" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <!-- GENUS POWER INFRASTRUCTURES LTD -->
+        <OctetString Value="47454E555320504F57455220494E46524153545255435455524553204C5444" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--27: 7E A0 1C 00 02 04 01 41 96 8B 6A E6 E6 00 C0 01 81 00 01 00 00 60 01 04 FF 02 00 60 1F 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 96. Expected: 98 -->
+<FrameType Value="96" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Data -->
+      <ClassId Value="0001" />
+      <!-- 0.0.96.1.4.255 -->
+      <InstanceId Value="0000600104FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--28: 7E A0 16 41 00 02 04 01 98 91 4E E6 E7 00 C4 01 81 00 12 07 E3 BC E8 7E-->
+<HDLC len="15" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 98. Expected: 98 -->
+<FrameType Value="98" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt16 Value="07E3" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--29: 7E A0 1C 00 02 04 01 41 1A EF 24 E6 E6 00 C0 01 81 00 07 01 00 5E 5B 03 FF 02 00 59 AA 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 1A. Expected: 98 -->
+<FrameType Value="1A" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ProfileGeneric -->
+      <ClassId Value="0007" />
+      <!-- 1.0.94.91.3.255 -->
+      <InstanceId Value="01005E5B03FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--30: 7E A8 8C 41 00 02 04 01 D0 E2 77 E6 E7 00 C4 02 81 01 00 00 00 01 00 82 00 A0 01 01 02 1A 02 02 0F FE 16 21 02 02 0F FE 16 21 02 02 0F FE 16 21 02 02 0F FE 16 23 02 02 0F FE 16 23 02 02 0F FE 16 23 02 02 0F FD 16 FF 02 02 0F FD 16 FF 02 02 0F FD 16 FF 02 02 0F FD 16 FF 02 02 0F FD 16 2C 02 02 0F 00 16 1C 02 02 0F 00 16 1B 02 02 0F 00 16 1D 02 02 0F 00 16 06 02 02 0F 00 16 FF 02 02 0F 00 16 1E 02 02 0F 00 16 20 02 78 34 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: D0. Expected: 98 -->
+<FrameType Value="D0" />
+<NextFrame Value="C402810100000001008200A00101021A02020FFE162102020FFE162102020FFE162102020FFE162302020FFE162302020FFE162302020FFD16FF02020FFD16FF02020FFD16FF02020FFD16FF02020FFD162C02020F00161C02020F00161B02020F00161D02020F00160602020F0016FF02020F00161E02020F00162002" />
+</HDLC>
+<!--31: 7E A0 0A 00 02 04 01 41 31 3A 56 7E-->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<!-- Invalid I Frame: 31. Expected: 0 -->
+<FrameType Value="31" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--32: 7E A0 3B 41 00 02 04 01 D2 03 EE 02 0F 00 16 20 02 02 0F 00 16 1F 02 02 0F 00 16 1B 02 02 0F 00 16 1C 02 02 0F 00 16 1B 02 02 0F 00 16 1C 02 02 0F 00 16 1E 02 02 0F 00 16 1F 8B DD 7E-->
+<HDLC len="3A" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: D2. Expected: 98 -->
+<FrameType Value="D2" />
+<NextFrame Value="020F00162002020F00161F02020F00161B02020F00161C02020F00161B02020F00161C02020F00161E02020F00161F" />
+</HDLC>
+<!--33: 7E A0 1C 00 02 04 01 41 98 F5 83 E6 E6 00 C0 01 81 00 07 01 00 5E 5B 03 FF 03 00 81 B3 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="98" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ProfileGeneric -->
+      <ClassId Value="0007" />
+      <!-- 1.0.94.91.3.255 -->
+      <InstanceId Value="01005E5B03FF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--34: 7E A8 8C 41 00 02 04 01 B8 AC 98 E6 E7 00 C4 02 81 01 00 00 00 01 00 82 01 D6 01 1A 02 04 12 00 03 09 06 01 00 1F 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 33 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 47 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 20 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 34 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 48 07 00 FF 0F 03 12 00 00 02 04 12 4C 67 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="B8" />
+<NextFrame Value="C402810100000001008201D6011A0204120003090601001F0700FF0F03120000020412000309060100330700FF0F03120000020412000309060100470700FF0F03120000020412000309060100200700FF0F03120000020412000309060100340700FF0F03120000020412000309060100480700FF0F03120000020412" />
+</HDLC>
+<!--35: 7E A0 0A 00 02 04 01 41 B1 32 D2 7E-->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<FrameType Value="B1" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--36: 7E A8 8C 41 00 02 04 01 BA BE BB 00 03 09 06 01 00 21 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 35 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 49 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 0D 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 0E 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 09 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 01 07 00 FF 0F 03 12 00 00 02 04 12 00 03 43 73 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="BA" />
+<NextFrame Value="000309060100210700FF0F03120000020412000309060100350700FF0F03120000020412000309060100490700FF0F031200000204120003090601000D0700FF0F031200000204120003090601000E0700FF0F03120000020412000309060100090700FF0F03120000020412000309060100010700FF0F031200000204120003" />
+</HDLC>
+<!-- 37: 7E A0 0A 00 02 04 01 41 D1 34 B1 7E -->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<FrameType Value="D1" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--38: 7E A8 8C 41 00 02 04 01 BC 88 DE 09 06 01 00 03 07 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 00 00 5E 5B 08 FF 0F 03 12 00 00 02 04 12 00 03 09 06 00 00 00 01 02 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 01 08 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 05 08 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 08 08 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 09 08 00 FF 0F 03 12 00 00 02 04 12 00 04 09 06 E7 47 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="BC" />
+<NextFrame Value="09060100030700FF0F031200000204120003090600005E5B08FF0F03120000020412000309060000000102FF0F03120000020412000309060100010800FF0F03120000020412000309060100050800FF0F03120000020412000309060100080800FF0F03120000020412000309060100090800FF0F0312000002041200040906" />
+</HDLC>
+<!--39: 7E A0 0A 00 02 04 01 41 F1 36 90 7E-->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<FrameType Value="F1" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--40: 7E A0 71 41 00 02 04 01 BE 38 69 01 00 01 06 00 FF 0F 03 12 00 00 02 04 12 00 04 09 06 01 00 09 06 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 01 02 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 09 02 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 02 08 00 FF 0F 03 12 00 00 02 04 12 00 03 09 06 01 00 0A 08 00 FF 0F 03 12 00 00 89 25 7E-->
+<HDLC len="70" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="BE" />
+<NextFrame Value="0100010600FF0F03120000020412000409060100090600FF0F03120000020412000309060100010200FF0F03120000020412000309060100090200FF0F03120000020412000309060100020800FF0F031200000204120003090601000A0800FF0F03120000" />
+</HDLC>
+<!--41: 7E A0 1C 00 02 04 01 41 5C DD 03 E6 E6 00 C0 01 81 00 07 01 00 5E 5B 00 FF 03 00 4C 96 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 5C. Expected: BA -->
+<FrameType Value="5C" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ProfileGeneric -->
+      <ClassId Value="0007" />
+      <!-- 1.0.94.91.0.255 -->
+      <InstanceId Value="01005E5B00FF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--42: 7E A8 8C 41 00 02 04 01 F4 C4 10 E6 E7 00 C4 02 81 00 00 00 00 01 00 82 01 E8 01 21 02 04 12 00 08 09 06 00 00 01 00 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 1F 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 33 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 47 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 20 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 34 07 00 FF 0F 02 12 00 00 02 04 12 92 DD 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: F4. Expected: BA -->
+<FrameType Value="F4" />
+<NextFrame Value="C402810000000001008201E80121020412000809060000010000FF0F021200000204120003090601001F0700FF0F02120000020412000309060100330700FF0F02120000020412000309060100470700FF0F02120000020412000309060100200700FF0F02120000020412000309060100340700FF0F02120000020412" />
+</HDLC>
+<!-- 43: 7E A0 0A 00 02 04 01 41 71 3E 14 7E -->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<!-- Invalid I Frame: 71. Expected: 0 -->
+<FrameType Value="71" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--44: 7E A8 8C 41 00 02 04 01 F6 D6 33 00 03 09 06 01 00 48 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 21 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 35 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 49 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 0D 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 0E 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 09 07 00 FF 0F 02 12 00 00 02 04 12 00 03 82 CC 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: F6. Expected: BA -->
+<FrameType Value="F6" />
+<NextFrame Value="000309060100480700FF0F02120000020412000309060100210700FF0F02120000020412000309060100350700FF0F02120000020412000309060100490700FF0F021200000204120003090601000D0700FF0F021200000204120003090601000E0700FF0F02120000020412000309060100090700FF0F021200000204120003" />
+</HDLC>
+<!--45: 7E A0 0A 00 02 04 01 41 91 30 F3 7E -->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<!-- Invalid I Frame: 91. Expected: 0 -->
+<FrameType Value="91" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--46: 7E A8 8C 41 00 02 04 01 F8 A8 DA 09 06 01 00 01 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 03 07 00 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 60 07 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 00 00 5E 5B 08 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 5E 5B 00 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 00 01 00 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 60 02 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 0B D0 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: F8. Expected: BA -->
+<FrameType Value="F8" />
+<NextFrame Value="09060100010700FF0F02120000020412000309060100030700FF0F02120000020412000109060000600700FF0F021200000204120003090600005E5B08FF0F021200000204120001090600005E5B00FF0F02120000020412000109060000000100FF0F02120000020412000109060000600200FF0F0212000002041200030906" />
+</HDLC>
+<!--47: 7E A0 0A 00 02 04 01 41 B1 32 D2 7E -->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<!-- Invalid I Frame: B1. Expected: 0 -->
+<FrameType Value="B1" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--48: 7E A0 83 41 00 02 04 01 FA F2 CD 00 00 00 01 02 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 01 08 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 05 08 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 08 08 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 09 08 00 FF 0F 02 12 00 00 02 04 12 00 04 09 06 01 00 01 06 00 FF 0F 02 12 00 00 02 04 12 00 04 09 06 01 00 01 06 00 FF 0F 05 12 00 00 14 5F 7E-->
+<HDLC len="82" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: FA. Expected: BA -->
+<FrameType Value="FA" />
+<NextFrame Value="0000000102FF0F02120000020412000309060100010800FF0F02120000020412000309060100050800FF0F02120000020412000309060100080800FF0F02120000020412000309060100090800FF0F02120000020412000409060100010600FF0F02120000020412000409060100010600FF0F05120000" />
+</HDLC>
+<!--49: 7E A0 16 00 02 04 01 41 DE 90 4D E6 E6 00 C0 02 81 00 00 00 01 73 7F 7E-->
+<HDLC len="15" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: DE. Expected: BA -->
+<FrameType Value="DE" />
+<PDU>
+<GetRequest>
+  <GetRequestForNextDataBlock>
+    <InvokeIdAndPriority Value="81" />
+    <BlockNumber Value="00000001" />
+  </GetRequestForNextDataBlock>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--50: 7E A0 87 41 00 02 04 01 1C BC 20 E6 E7 00 C4 02 81 01 00 00 00 02 00 82 00 6C 02 04 12 00 04 09 06 01 00 09 06 00 FF 0F 02 12 00 00 02 04 12 00 04 09 06 01 00 09 06 00 FF 0F 05 12 00 00 02 04 12 00 03 09 06 01 00 01 02 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 09 02 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 02 08 00 FF 0F 02 12 00 00 02 04 12 00 03 09 06 01 00 0A 08 00 FF 0F 02 12 00 00 37 07 7E-->
+<HDLC len="86" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 1C. Expected: BA -->
+<FrameType Value="1C" />
+<PDU>
+<GetResponse>
+  <GetResponsewithDataBlock>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <LastBlock Value="01" />
+      <BlockNumber Value="00000002" />
+      <Result>
+        <RawData Value="020412000409060100090600FF0F02120000020412000409060100090600FF0F05120000020412000309060100010200FF0F02120000020412000309060100090200FF0F02120000020412000309060100020800FF0F021200000204120003090601000A0800FF0F02120000" />
+      </Result>
+    </Result>
+  </GetResponsewithDataBlock>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--51: 7E A0 1C 00 02 04 01 41 DC D5 87 E6 E6 00 C0 01 81 00 07 01 00 5E 5B 00 FF 02 00 94 8F 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: DC. Expected: BA -->
+<FrameType Value="DC" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ProfileGeneric -->
+      <ClassId Value="0007" />
+      <!-- 1.0.94.91.0.255 -->
+      <InstanceId Value="01005E5B00FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--52: 7E A8 8C 41 00 02 04 01 FC 8C 9C E6 E7 00 C4 02 81 01 00 00 00 01 00 82 00 B6 01 01 02 21 09 0C 07 E4 05 0F 05 14 00 1E 00 01 4A 00 05 00 00 06 2F 05 00 00 08 A6 05 00 00 06 F3 12 61 72 12 61 E0 12 61 67 10 02 84 10 02 EB 10 02 90 10 02 B2 12 C3 96 06 00 00 35 AA 05 00 00 25 10 05 00 00 26 CE 12 00 22 06 00 02 C5 51 12 03 FA 06 00 00 00 05 11 00 09 0C 07 E4 05 01 FF 00 00 00 00 01 4A 00 06 00 F4 8F DA 06 00 D3 A1 AE AB 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: FC. Expected: BA -->
+<FrameType Value="FC" />
+<NextFrame Value="C402810100000001008200B601010221090C07E4050F0514001E00014A00050000062F05000008A605000006F31261721261E01261671002841002EB1002901002B212C39606000035AA050000251005000026CE120022060002C5511203FA06000000051100090C07E40501FF00000000014A000600F48FDA0600D3A1" />
+</HDLC>
+<!--53: 7E A0 0A 00 02 04 01 41 F1 36 90 7E-->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<!-- Invalid I Frame: F1. Expected: 0 -->
+<FrameType Value="F1" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--54: 7E A0 51 41 00 02 04 01 FE BF 48 BC 06 00 00 90 74 06 01 4A 39 94 06 00 00 2F 58 09 0C 07 E4 05 0F FF 09 1E 00 00 01 4A 00 06 00 00 44 70 09 0C 07 E4 05 0F FF 12 00 00 00 01 4A 00 06 00 01 1B 48 06 00 01 56 E4 06 00 00 00 00 06 00 00 00 0A 20 48 7E-->
+<HDLC len="50" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: FE. Expected: BA -->
+<FrameType Value="FE" />
+<NextFrame Value="BC060000907406014A39940600002F58090C07E4050FFF091E0000014A000600004470090C07E4050FFF12000000014A000600011B4806000156E40600000000060000000A" />
+</HDLC>
+<!--55: 7E A0 1C 00 02 04 01 41 1C D9 41 E6 E6 00 C0 01 81 00 07 00 00 5E 5B 0A FF 03 00 5D CB 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 1C. Expected: BA -->
+<FrameType Value="1C" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ProfileGeneric -->
+      <ClassId Value="0007" />
+      <!-- 0.0.94.91.10.255 -->
+      <InstanceId Value="00005E5B0AFF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--56: 7E A8 8C 41 00 02 04 01 F0 E0 56 E6 E7 00 C4 02 81 01 00 00 00 01 00 82 00 A4 01 09 02 04 12 00 01 09 06 00 00 60 01 00 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 60 01 01 FF 0F 02 12 00 00 02 04 12 00 01 09 06 01 00 00 02 00 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 5E 5B 09 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 5E 5B 0B FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 5E 5B 0C FF 0F 02 12 00 00 02 04 12 71 9E 7E-->
+<HDLC len="8B" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: F0. Expected: BA -->
+<FrameType Value="F0" />
+<NextFrame Value="C402810100000001008200A40109020412000109060000600100FF0F02120000020412000109060000600101FF0F02120000020412000109060100000200FF0F021200000204120001090600005E5B09FF0F021200000204120001090600005E5B0BFF0F021200000204120001090600005E5B0CFF0F02120000020412" />
+</HDLC>
+<!--57: 7E A0 0A 00 02 04 01 41 31 3A 56 7E-->
+<HDLC len="C" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- S frame. -->
+<!-- Invalid I Frame: 31. Expected: 0 -->
+<FrameType Value="31" />
+<Command Value="NextFrame" />
+</HDLC>
+<!--58: 7E A0 3F 41 00 02 04 01 F2 77 A0 00 01 09 06 01 00 00 04 02 FF 0F 02 12 00 00 02 04 12 00 01 09 06 01 00 00 04 03 FF 0F 02 12 00 00 02 04 12 00 01 09 06 00 00 60 01 04 FF 0F 02 12 00 00 91 11 7E-->
+<HDLC len="3E" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: F2. Expected: BA -->
+<FrameType Value="F2" />
+<NextFrame Value="000109060100000402FF0F02120000020412000109060100000403FF0F02120000020412000109060000600104FF0F02120000" />
+</HDLC>
+<!--59: 7E A0 1C 00 02 04 01 41 5E CF 20 E6 E6 00 C0 01 81 00 07 00 00 5E 5B 0A FF 02 00 85 D2 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 5E. Expected: BA -->
+<FrameType Value="5E" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ProfileGeneric -->
+      <ClassId Value="0007" />
+      <!-- 0.0.94.91.10.255 -->
+      <InstanceId Value="00005E5B0AFF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--60: 7E A0 75 41 00 02 04 01 14 1E 0C E6 E7 00 C4 02 81 01 00 00 00 01 00 82 00 5A 01 01 02 09 09 0E 20 20 20 20 20 20 20 35 30 39 37 39 39 36 09 1F 47 45 4E 55 53 20 50 4F 57 45 52 20 49 4E 46 52 41 53 54 52 55 43 54 55 52 45 53 20 4C 54 44 0A 0B 4C 43 30 30 33 2E 36 33 32 32 38 11 04 0A 02 43 32 0A 07 34 30 2D 32 30 30 41 12 00 01 12 00 01 12 07 E3 F5 BE 7E-->
+<HDLC len="74" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 14. Expected: BA -->
+<FrameType Value="14" />
+<PDU>
+<GetResponse>
+  <GetResponsewithDataBlock>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <LastBlock Value="01" />
+      <BlockNumber Value="00000001" />
+      <Result>
+        <RawData Value="01010209090E2020202020202035303937393936091F47454E555320504F57455220494E46524153545255435455524553204C54440A0B4C433030332E363332323811040A0243320A0734302D323030411200011200011207E3" />
+      </Result>
+    </Result>
+  </GetResponsewithDataBlock>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--61: 7E A0 1C 00 02 04 01 41 92 AF 2C E6 E6 00 C0 01 81 00 03 01 00 01 02 00 FF 02 00 9F E9 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 92. Expected: BA -->
+<FrameType Value="92" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Register -->
+      <ClassId Value="0003" />
+      <!-- 1.0.1.2.0.255 -->
+      <InstanceId Value="0100010200FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--62: 7E A0 18 41 00 02 04 01 58 BC 0E E6 E7 00 C4 01 81 00 06 00 01 1B 48 D2 3A 7E-->
+<HDLC len="17" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 58. Expected: BA -->
+<FrameType Value="58" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt32 Value="00011B48" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--63: 7E A0 1C 00 02 04 01 41 70 B3 E8 E6 E6 00 C0 01 81 00 03 01 00 01 02 00 FF 03 00 47 F0 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 70. Expected: BA -->
+<FrameType Value="70" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Register -->
+      <ClassId Value="0003" />
+      <!-- 1.0.1.2.0.255 -->
+      <InstanceId Value="0100010200FF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--64: 7E A0 19 41 00 02 04 01 36 11 1B E6 E7 00 C4 01 81 00 02 02 0F 00 16 1B 3D E6 7E-->
+<HDLC len="18" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 36. Expected: BA -->
+<FrameType Value="36" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <Structure Qty="02" >
+          <Int8 Value="00" />
+          <Enum Value="1B" />
+        </Structure>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--65: 7E A0 1C 00 02 04 01 41 D6 8F 28 E6 E6 00 C0 01 81 00 03 01 00 09 02 00 FF 02 00 C7 C8 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: D6. Expected: BA -->
+<FrameType Value="D6" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Register -->
+      <ClassId Value="0003" />
+      <!-- 1.0.9.2.0.255 -->
+      <InstanceId Value="0100090200FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--66: 7E A0 18 41 00 02 04 01 9C 94 8E E6 E7 00 C4 01 81 00 06 00 01 56 E4 AA A3 7E-->
+<HDLC len="17" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 9C. Expected: BA -->
+<FrameType Value="9C" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt32 Value="000156E4" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--67: 7E A0 1C 00 02 04 01 41 B4 9B 68 E6 E6 00 C0 01 81 00 03 01 00 09 02 00 FF 03 00 1F D1 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: B4. Expected: BA -->
+<FrameType Value="B4" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- Register -->
+      <ClassId Value="0003" />
+      <!-- 1.0.9.2.0.255 -->
+      <InstanceId Value="0100090200FF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--68: 7E A0 19 41 00 02 04 01 7A 79 93 E6 E7 00 C4 01 81 00 02 02 0F 00 16 1C 82 92 7E-->
+<HDLC len="18" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 7A. Expected: BA -->
+<FrameType Value="7A" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <Structure Qty="02" >
+          <Int8 Value="00" />
+          <Enum Value="1C" />
+        </Structure>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--69: 7E A0 1C 00 02 04 01 41 1A EF 24 E6 E6 00 C0 01 81 00 04 01 00 B2 06 00 FF 02 00 62 E3 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="1A" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.178.6.0.255 -->
+      <InstanceId Value="0100B20600FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--70: 7E A0 18 41 00 02 04 01 D0 FC 06 E6 E7 00 C4 01 81 00 06 00 00 00 A0 71 7A 7E-->
+<HDLC len="17" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="D0" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt32 Value="000000A0" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--71: 7E A0 1C 00 02 04 01 41 F8 F3 E0 E6 E6 00 C0 01 81 00 04 01 00 B2 06 00 FF 03 00 BA FA 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: F8. Expected: 3C -->
+<FrameType Value="F8" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.178.6.0.255 -->
+      <InstanceId Value="0100B20600FF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--72: 7E A0 19 41 00 02 04 01 BE 51 13 E6 E7 00 C4 01 81 00 02 02 0F 00 16 1B 3D E6 7E-->
+<HDLC len="18" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: BE. Expected: 3C -->
+<FrameType Value="BE" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <Structure Qty="02" >
+          <Int8 Value="00" />
+          <Enum Value="1B" />
+        </Structure>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--73: 7E A0 1C 00 02 04 01 41 3C DB 60 E6 E6 00 C0 01 81 00 04 01 00 B2 06 00 FF 04 00 B2 B7 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="3C" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.178.6.0.255 -->
+      <InstanceId Value="0100B20600FF" />
+      <AttributeId Value="04" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--74: 7E A0 14 41 00 02 04 01 F2 76 B5 E6 E7 00 C4 01 81 01 0D 7B 6D 7E-->
+<HDLC len="13" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="F2" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <DataAccessError Value="AccessViolated" />
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--75: 7E A0 1C 00 02 04 01 41 5E CF 20 E6 E6 00 C0 01 81 00 04 01 00 B2 06 00 FF 05 00 6A AE 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="5E" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.178.6.0.255 -->
+      <InstanceId Value="0100B20600FF" />
+      <AttributeId Value="05" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--76: 7E A0 21 41 00 02 04 01 14 A7 11 E6 E7 00 C4 01 81 00 09 0C 07 E4 05 0F 05 14 00 22 00 01 4A 00 C2 A7 7E-->
+<HDLC len="20" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="14" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <!-- 5/16/2020 7:00:34 AM -->
+        <OctetString Value="07E4050F0514002200014A00" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--77: 7E A0 1C 00 02 04 01 41 92 AF 2C E6 E6 00 C0 01 81 00 04 01 00 B3 06 00 FF 02 00 49 E7 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: 92. Expected: 70 -->
+<FrameType Value="92" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.179.6.0.255 -->
+      <InstanceId Value="0100B30600FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--78: 7E A0 18 41 00 02 04 01 58 BC 0E E6 E7 00 C4 01 81 00 06 00 00 01 04 87 80 7E-->
+<HDLC len="17" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 58. Expected: 70 -->
+<FrameType Value="58" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt32 Value="00000104" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--79: 7E A0 1C 00 02 04 01 41 70 B3 E8 E6 E6 00 C0 01 81 00 04 01 00 B3 06 00 FF 03 00 91 FE 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<FrameType Value="70" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.179.6.0.255 -->
+      <InstanceId Value="0100B30600FF" />
+      <AttributeId Value="03" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--80: 7E A0 19 41 00 02 04 01 36 11 1B E6 E7 00 C4 01 81 00 02 02 0F 00 16 1C 82 92 7E-->
+<HDLC len="18" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<FrameType Value="36" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <Structure Qty="02" >
+          <Int8 Value="00" />
+          <Enum Value="1C" />
+        </Structure>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--81: 7E A0 1C 00 02 04 01 41 B4 9B 68 E6 E6 00 C0 01 81 00 04 01 00 B3 06 00 FF 04 00 99 B3 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: B4. Expected: 92 -->
+<FrameType Value="B4" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.179.6.0.255 -->
+      <InstanceId Value="0100B30600FF" />
+      <AttributeId Value="04" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--82: 7E A0 14 41 00 02 04 01 7A 36 BD E6 E7 00 C4 01 81 01 0D 7B 6D 7E-->
+<HDLC len="13" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 7A. Expected: 92 -->
+<FrameType Value="7A" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <DataAccessError Value="AccessViolated" />
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+<!--83: 7E A0 1C 00 02 04 01 41 D6 8F 28 E6 E6 00 C0 01 81 00 04 01 00 B3 06 00 FF 05 00 41 AA 7E-->
+<HDLC len="1B" >
+<TargetAddress Value="4100" />
+<SourceAddress Value="20" />
+<!-- Invalid I Frame: D6. Expected: 92 -->
+<FrameType Value="D6" />
+<PDU>
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!-- ExtendedRegister -->
+      <ClassId Value="0004" />
+      <!-- 1.0.179.6.0.255 -->
+      <InstanceId Value="0100B30600FF" />
+      <AttributeId Value="05" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+</PDU>
+</HDLC>
+<!--84: 7E A0 21 41 00 02 04 01 9C E7 19 E6 E7 00 C4 01 81 00 09 0C 07 E4 05 0F 05 14 00 22 00 01 4A 00 C2 A7 7E-->
+<HDLC len="20" >
+<TargetAddress Value="20" />
+<SourceAddress Value="4100" />
+<!-- Invalid I Frame: 9C. Expected: 92 -->
+<FrameType Value="9C" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <!-- 5/16/2020 7:00:34 AM -->
+        <OctetString Value="07E4050F0514002200014A00" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+</Messages>
